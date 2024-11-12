@@ -373,7 +373,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "car_data = pd.read_csv('G:/EVA/CIENCIA DE DATOS TRIPLE TEN/6to Sprint/Documentos vS Code/mi_proyectoseis/Proyecto6/vehicles_env/vehicles_us.csv')\nhist_button = st.button('construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('creación de un histograma para el conjunto de datos de anuncios de venta de coches')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de Odometer\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('gráfico de dispersión')\nif hist_secondbutton: ",
+        "peekOfCode": "car_data = pd.read_csv('G:/EVA/CIENCIA DE DATOS TRIPLE TEN/6to Sprint/Documentos vS Code/mi_proyectoseis/Proyecto6/vehicles_env/vehicles_us.csv')\nhist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: ",
         "detail": "app",
         "documentation": {}
     },
@@ -382,7 +382,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "hist_button = st.button('construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('creación de un histograma para el conjunto de datos de anuncios de venta de coches')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de Odometer\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('gráfico de dispersión')\nif hist_secondbutton: \n    st.write('creación de gráfico de dispersión')",
+        "peekOfCode": "hist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')",
         "detail": "app",
         "documentation": {}
     },
@@ -391,7 +391,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "hist_secondbutton = st.button('gráfico de dispersión')\nif hist_secondbutton: \n    st.write('creación de gráfico de dispersión')\n    #crear un gráfico de dispersión\n    grafico = px.scatter(car_data, x=\"odometer\", y=\"price\", title=\"Dispersion entre Odometro y Precio\")\n    #mostrar gráfico \n    st.plotly_chart(grafico, use_container_width=True)",
+        "peekOfCode": "hist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')\n    #crear un gráfico de dispersión\n    grafico = px.scatter(car_data, x=\"odometer\", y=\"price\", title=\"Dispersion entre Kilomentraje y Precio\")\n    #mostrar gráfico \n    st.plotly_chart(grafico, use_container_width=True)",
         "detail": "app",
         "documentation": {}
     }
