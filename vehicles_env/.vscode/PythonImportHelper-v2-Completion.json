@@ -90,6 +90,33 @@
         "documentation": {}
     },
     {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
         "label": "Tee",
         "kind": 6,
         "importPath": "Scripts.pywin32_postinstall",
@@ -339,6 +366,33 @@
         "description": "Scripts.pywin32_testall",
         "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
         "detail": "Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "car_data",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "car_data = pd.read_csv('G:/EVA/CIENCIA DE DATOS TRIPLE TEN/6to Sprint/Documentos vS Code/mi_proyectoseis/Proyecto6/vehicles_env/vehicles_us.csv')\nhist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hist_button",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "hist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hist_secondbutton",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "hist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')\n    #crear un gráfico de dispersión\n    grafico = px.scatter(car_data, x=\"odometer\", y=\"price\", title=\"Dispersion entre Kilomentraje y Precio\")\n    #mostrar gráfico \n    st.plotly_chart(grafico, use_container_width=True)",
+        "detail": "app",
         "documentation": {}
     }
 ]
