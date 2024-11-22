@@ -31,7 +31,25 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "car_data = pd.read_csv('C:/Users/User_01/RESCATE_PROYECTO6/vehicles_us.csv')\nhist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: ",
+        "peekOfCode": "car_data = pd.read_csv('C:/Users/User_01/RESCATE_PROYECTO6/vehicles_us.csv')\n# Título principal\nhist_titulo = st.title('Conoce todo sobre tu próximo vehículo')\n# Encabezado\nhist_encabezado = st.header('¡Consulta aquí la información necesaria de cada modelo y asegura tu compra!')\nhist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hist_titulo",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "hist_titulo = st.title('Conoce todo sobre tu próximo vehículo')\n# Encabezado\nhist_encabezado = st.header('¡Consulta aquí la información necesaria de cada modelo y asegura tu compra!')\nhist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')\n    fig.update_layout(\n    xaxis_title=\"Kilometraje\",",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hist_encabezado",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "hist_encabezado = st.header('¡Consulta aquí la información necesaria de cada modelo y asegura tu compra!')\nhist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')\n    fig.update_layout(\n    xaxis_title=\"Kilometraje\",\n    yaxis_title=\"Frecuencia\"\n)",
         "detail": "app",
         "documentation": {}
     },
@@ -40,7 +58,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "hist_button = st.button('Construir histograma')\nif hist_button: #al hacer click en el boton \n    st.write('Te presentamos un histograma para el conjunto de datos de anuncios de venta de vehiculos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= \"Histograma de kilometraje\")\n    #mostrar un gráfico Plotly interactivo\n    st.plotly_chart(fig, use_container_width=True)\nhist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')",
+        "peekOfCode": "hist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')\n    fig.update_layout(\n    xaxis_title=\"Kilometraje\",\n    yaxis_title=\"Frecuencia\"\n)\n    #mostrar un gráfico Plotly interactivo",
         "detail": "app",
         "documentation": {}
     },
@@ -49,7 +67,16 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "hist_secondbutton = st.button('Construir gráfico de dispersión')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehiculos')\n    #crear un gráfico de dispersión\n    grafico = px.scatter(car_data, x=\"odometer\", y=\"price\", title=\"Dispersion entre Kilomentraje y Precio\")\n    #mostrar gráfico \n    st.plotly_chart(grafico, use_container_width=True)",
+        "peekOfCode": "hist_secondbutton = st.button('Construir gráfico de dispersión de precios')\nif hist_secondbutton: \n    st.write('Conoce a través de un gráfico de dispersión la relación del kilometraje y precios de vehículos')\n    #crear un gráfico de dispersión\n    grafico = px.scatter(car_data, x=\"odometer\", y=\"price\", title=\"Dispersión entre Kilomentraje y Precio\")\n    grafico.update_layout(\n    xaxis_title=\"Kilometraje\",\n    yaxis_title=\"Costo\")\n    #mostrar gráfico \n    st.plotly_chart(grafico, use_container_width=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "hist_histogram",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "hist_histogram = st.checkbox('Construir histograma por modelos')\nif hist_histogram: \n    st.write('Consulta el rango de precios de nuestros modelos y elige lo que más se adapte a ti')\n    #crear un histograma\n    fig2 = px.histogram(car_data, x=\"price\", y=\"model\", title= 'Histograma del total de vehículos por kilometraje')\n    fig2.update_layout(\n    xaxis_title=\"Costo\",\n    yaxis_title=\"Modelo\")\n    #mostrar un gráfico2 Plotly interactivo\n    st.plotly_chart(fig2, use_container_width=True)",
         "detail": "app",
         "documentation": {}
     }
