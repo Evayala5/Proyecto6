@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "car_data = pd.read_csv('C:/Users/User_01/RESCATE_PROYECTO6/vehicles_us.csv')\n# Título principal\nhist_titulo = st.title('Conoce todo sobre tu próximo vehículo')\n# Encabezado\nhist_encabezado = st.header('¡Consulta aquí la información necesaria de cada modelo y asegura tu compra!')\nhist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')",
+        "peekOfCode": "car_data = pd.read_csv('vehicles_us.csv')\n# Título principal\nhist_titulo = st.title('Conoce todo sobre tu próximo vehículo')\n# Encabezado\nhist_encabezado = st.header('¡Consulta aquí la información necesaria de cada modelo y asegura tu compra!')\nhist_button = st.button('Construir histograma por kilometraje')\nif hist_button: #al hacer click en el boton \n    st.write('Conoce cuántos modelos están a tu disposición con base al kilometraje de vehículos')\n    #crear un histograma\n    fig = px.histogram(car_data, x=\"odometer\", title= 'Histograma del total de vehículos por kilometraje')",
         "detail": "app",
         "documentation": {}
     },
