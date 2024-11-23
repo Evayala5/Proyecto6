@@ -21,4 +21,8 @@ Network URL: http://192.168.1.67:8501
 
 _Tengo una duda, desde el network url si me abre la aplicación y funciona pero cuando abro el link de render me genera un error donde dice que mi .csv no está en la ubicación pero sí está. Si me pueden orientar al respecto, muchas gracias._
 
+<<<<<<< HEAD
 Proyecto desde render: https://proyecto6-1-2wuf.onrender.com
+=======
+Proyecto desde render: https://proyecto6-1-2wuf.onrender.com
+>>>>>>> 1d55f3556616bdaa085bb9369e0eeac2a9f245a9
